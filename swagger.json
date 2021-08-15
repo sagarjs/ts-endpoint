@@ -1,0 +1,141 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Stuff": {
+				"properties": {
+					"key": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"totalCount": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"key",
+					"createdAt",
+					"totalCount"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"StuffResponse": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"records": {
+						"items": {
+							"$ref": "#/components/schemas/Stuff"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"code",
+					"msg",
+					"records"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"StuffRequest": {
+				"properties": {
+					"startDate": {
+						"type": "string"
+					},
+					"endDate": {
+						"type": "string"
+					},
+					"minCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"maxCount": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"startDate",
+					"endDate",
+					"minCount",
+					"maxCount"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"Bearer": {
+				"name": "Authorization",
+				"in": "header",
+				"type": "apiKey",
+				"description": "Please enter into field the word 'Bearer' following by space and JWT"
+			}
+		}
+	},
+	"info": {
+		"title": "ts-endpoint",
+		"version": "0.1.0",
+		"description": "A sample TS endpoint",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Sagar Sodah"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/api/v1/stuff": {
+			"post": {
+				"operationId": "GetStuff",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/StuffResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Stuff"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/StuffRequest"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}

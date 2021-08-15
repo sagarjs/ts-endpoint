@@ -1,0 +1,20 @@
+{
+  "entryFile": "./src/app.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "spec": {
+    "outputDirectory": ".",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "Bearer": {
+        "name": "Authorization",
+        "in": "header",
+        "type": "apiKey",
+        "description": "Please enter into field the word 'Bearer' following by space and JWT"
+      }
+    }
+  },
+  "routes": {
+    "routesDir": "./src",
+    "middleware": "express"
+  }
+}
