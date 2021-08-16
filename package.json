@@ -6,10 +6,12 @@
   "scripts": {
     "prestart": "tsoa swagger-and-routes",
     "predebug": "tsoa swagger-and-routes",
-    "start": "nodemon src/server.ts",
+    "dev": "nodemon src/server.ts",
     "debug": "nodemon --exec node --inspect=0.0.0.0:9229 --require ts-node/register src/server.ts",
     "generate": "tsoa swagger-and-routes",
-    "test": "jest --forceExit --detectOpenHandles --coverage"
+    "test": "jest --forceExit --detectOpenHandles --coverage",
+    "postinstall": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
