@@ -8,6 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 
 dist
+coverage
 
 # Runtime data
 pids

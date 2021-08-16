@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose'
 import * as request from "supertest";
-import app, { MONGO_URI } from "../src/app";
-import { StuffResponse } from '../src/interfaces/stuff.i';
+import app, { MONGO_URI } from "../app";
+import { StuffResponse } from '../interfaces/stuff.i';
 
 const stuffRequest = {
     startDate: "2015-01-01",
