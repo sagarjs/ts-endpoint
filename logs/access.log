@@ -1,4 +1,0 @@
-[2021-08-15T21:59:23.210] [INFO] http - ::ffff:127.0.0.1 - - "GET /ping HTTP/1.1" 200 4 "" "node-superagent/3.8.3"
-[2021-08-15T21:59:23.253] [INFO] http - ::ffff:127.0.0.1 - - "POST /api/v1/stuff HTTP/1.1" 200 39 "" "node-superagent/3.8.3"
-[2021-08-15T22:01:34.582] [INFO] http - ::ffff:127.0.0.1 - - "GET /ping HTTP/1.1" 200 4 "" "node-superagent/3.8.3"
-[2021-08-15T22:01:38.381] [INFO] http - ::ffff:127.0.0.1 - - "POST /api/v1/stuff HTTP/1.1" 200 121246 "" "node-superagent/3.8.3"
