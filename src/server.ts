@@ -2,7 +2,7 @@ import app from './app';
 import * as fs from 'fs';
 import * as http2 from 'spdy';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const serverOptions = {
     key: fs.readFileSync('cert/ssl.key'),
