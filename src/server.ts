@@ -4,13 +4,9 @@ import * as http2 from 'spdy';
 
 const port = process.env.PORT || 3000;
 
-const serverOptions = {
-    key: fs.readFileSync('cert/ssl.key'),
-    cert: fs.readFileSync('cert/ssl.crt')
-};
-const server = http2.createServer(serverOptions, app);
-server.listen(port);
-server.on('listening', () => {
-    console.info(`ts-node-boilerplace on https://localhost:${port}`);
-    console.info(`ts-node-boilerplace api documentation on https://localhost:${port}/api/doc`);
+const server = app
+
+server.listen(port, () => {
+    console.info(`tserver running  on https://localhost:${port}`);
+    console.info(`api documentation on https://localhost:${port}/api/doc`);
 });
